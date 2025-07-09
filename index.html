@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MR CUBAN Taxi App - Easier, Quicker, and Cheaper." />
+  <title>MR CUBAN - Earn Points, Ride Free</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #222;
+    }
+    header {
+      background: orange;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .btn {
+      display: inline-block;
+      background: orange;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .rewards-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    .rewards-table th, .rewards-table td {
+      border: 1px solid #ddd;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    .rewards-table th {
+      background: #f5f5f5;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: #f9f9f9;
+      margin-top: 2rem;
+    }
+    /* Popup styling */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .popup-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .popup-content input {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .popup-content button {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MR CUBAN</h1>
+    <p>Easier, Quicker, and Cheaper</p>
+    <a href="https://your-play-store-or-apk-link.com" class="btn">Download the App</a>
+  </header>
+
+  <section>
+    <h2>🎁 Earn Points & Get Rewards</h2>
+    <p>Post your ride experience on Instagram and tag <strong>@mrcubanofficial</strong> with hashtag <strong>#RideWithMRCUBAN</strong>.</p>
+    <p>We’ll send you points that you can redeem for free rides and more!</p>
+
+    <table class="rewards-table">
+      <thead>
+        <tr><th>Action</th><th>Points</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Instagram Post with Tag</td><td>5 Points</td></tr>
+        <tr><td>Instagram Story with Tag</td><td>2 Points</td></tr>
+        <tr><td>Each Referral Ride</td><td>10 Points</td></tr>
+        <tr><td>YouTube Reel / Shorts</td><td>15 Points</td></tr>
+      </tbody>
+    </table>
+
+    <h3>🎯 Redeem Your Points</h3>
+    <p>Click the button below and enter your details to redeem points.</p>
+    <button class="btn" onclick="openPopup()">Redeem Points</button>
+  </section>
+
+  <section>
+    <h2>📞 Contact Us</h2>
+    <p><strong>Phone:</strong> +91 7522020838</p>
+    <p><strong>Email:</strong> mrcuban777@gmail.com</p>
+  </section>
+
+  <footer>
+    &copy; 2025 MR CUBAN. All rights reserved.
+  </footer>
+
+  <!-- Popup form -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h3>Redeem Points</h3>
+      <form action="https://formsubmit.co/mrcuban777@gmail.com" method="POST">
+        <input type="text" name="phone" placeholder="Enter your phone number" required />
+        <input type="text" name="instagram" placeholder="Your Instagram username" required />
+        <input type="hidden" name="_subject" value="New MR CUBAN Redemption Request" />
+        <input type="hidden" name="_captcha" value="false" />
+        <button class="btn" type="submit">Submit</button>
+      </form>
+      <br>
+      <button class="btn" style="background: gray;" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function openPopup() {
+      document.getElementById("popup").style.display = "flex";
+    }
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+</body>
+</html>
